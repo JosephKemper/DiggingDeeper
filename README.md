@@ -4,6 +4,8 @@ In this series, I will write a series of articles focusing on digging deeper int
 ## Contents
 
 * [Data Structures Tutorial](/DataStructuresTutoiral/index.md)
-    - Contains a tutorial on stacks, sets, and Binary Search Trees.
+    - [Stacks](/DataStructuresTutoiral/DST-stacks.md)
+    - [Sets](/DataStructuresTutoiral/DST-sets.md)
+    - [Binary Search Trees](/DataStructuresTutoiral/DST-trees.md)
 
 
