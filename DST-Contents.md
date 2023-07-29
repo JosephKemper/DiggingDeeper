@@ -2,9 +2,9 @@
 
 Welcome to our Python Data Structures tutorial. In this tutorial, we are going to teach some data structures in Python. This tutorial assumes you have a basic understanding of Python. 
 
-* [Stacks](1-stacks.md)
-* [Sets](2-sets.md)
-* [Trees](3-trees.md)
+* [Stacks](DST-stacks.md)
+* [Sets](DST-sets.md)
+* [Trees](DST-trees.md)
 
 In these tutorials, our goal is to do more than to simply teach you the syntax of the various data structures we talk about; we want to empower you to be able to actually solve problems with what you learn. 
 
