@@ -157,4 +157,4 @@ print(findLongestSequence(arr, n))
 
 Work out a solution for yourself, and then join us in a discussion about different possibilities to solve this problem afterwards. 
 
-[Back to Welcome Page](DST-Contents)
+[Back to Data Structure Tutorial Index](index.md)
