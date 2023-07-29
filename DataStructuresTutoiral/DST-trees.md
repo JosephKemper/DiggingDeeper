@@ -362,4 +362,4 @@ For this challenge, our goal is to take in a value and be able to find either th
 
 For the solution we implemented, we were able to use that structure. Additionally, with how our Binary Search Tree was built, we were able to do the same kind of thing we did with the `__iter__` and `__reversed__` methods and used the algorithm we built for the `find_next_smallest` method. Share your thoughts and solutions with us as we continue our efforts to dig deeper into the wonderful world of coding.
 
-[Back to Welcome Page](DST-Contents)
+[Back to Data Structure Tutorial Index](index.md)

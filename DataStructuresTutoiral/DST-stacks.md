@@ -242,4 +242,4 @@ print(maximalRectangle(matrix)) # 6
 
 Once you found a solution to this problem, join the discussion about it, and see how your solution compares to everyone else. Learning can be a community activity as well as an individual one.
 
-[Back to Welcome Page](DST-Contents)
+[Back to Data Structure Tutorial Index](index.md)
