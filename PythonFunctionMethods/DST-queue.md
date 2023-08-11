@@ -16,8 +16,26 @@ When using the list as a Queue Data Structure, you get O(1) performance for most
 
 ### Python Related Queue Commands
 ---
+For our purposes we are going to be focusing on using the list as a Queue. To learn about some of the other options for a Queue data structure follow any of these links:  
+* `collections.deque`
+    - [realpython.com](https://realpython.com/python-deque/)
+    - [python.org](https://docs.python.org/3/library/collections.html#collections.deque)
+    - [section.io](https://www.section.io/engineering-education/queue-data-structure-python/)
+    - [note.nkmk.me](https://note.nkmk.me/en/python-collections-deque/)
+* `queue.Queue`
+    - [python.org](https://docs.python.org/3/library/queue.html)
+    - [geeksforgeeks.org](https://www.geeksforgeeks.org/queue-in-python/)
+    - [askpython.com](https://www.askpython.com/python-modules/python-queue)
+    - [geeksforgeeks.org](https://www.geeksforgeeks.org/stack-queue-python-using-module-queue/)
 
+|Common Queue Operation|Description|Python Code|Performance|
+|----------------------|-----------|-----------|-----------|
+|enqueue(value)|Adds "value" to the back of the queue|my_queue.append(value)|O(1) - Performance of adding to the end of the dynamic array|
+|dequeue()|Two approaches: Remove and return the item from the front of the queue; or pop off index 0|value = my_queue [0] del my_queue[0] or value = my_queue.pop(0)|O(n) - Performance of obtaining and removing from the beginning of the dynamic array|
+|size() |Return the size of the queue|length = len(my_queue)|O(1) - Performance of returning the size of the dynamic array|
+|empty()|Returns true if the length of the queue is zero.|if len(my_queue) == 0:|O(1) - Performance of checking the size of the dynamic array|
 
+Table sourced from [here](https://byui-cse.github.io/cse212-course/lesson04/04-prepare.html)
 ### Examples of Queues
 ---
 
