@@ -16,7 +16,40 @@ When using the list as a Queue Data Structure, you get O(1) performance for most
 
 ### Python Related Queue Commands
 ---
-For our purposes we are going to be focusing on using the list as a Queue. To learn about some of the other options for a Queue data structure follow any of these links:  
+
+Queue related List commands in Python
+
+|Common Queue Operation|Description|Python Code|Performance|
+|----------------------|-----------|-----------|-----------|
+|enqueue(value)|Adds "value" to the back of the queue|my_queue.append(value)|O(1) - Performance of adding to the end of the dynamic array|
+|dequeue()|Two approaches: Remove and return the item from the front of the queue; or pop off index 0|value = my_queue [0] del my_queue[0] or value = my_queue.pop(0)|O(n) - Performance of obtaining and removing from the beginning of the dynamic array|
+|size() |Return the size of the queue|length = len(my_queue)|O(1) - Performance of returning the size of the dynamic array|
+|empty()|Returns true if the length of the queue is zero.|if len(my_queue) == 0:|O(1) - Performance of checking the size of the dynamic array|
+
+Table sourced from [here](https://byui-cse.github.io/cse212-course/lesson04/04-prepare.html)
+
+When using `collections.deque` instead of a list, to remove an item from the data structure, you would use `.popleft()`instead. For example this code would remove and print the number 1 from the deque object. 
+
+```Python
+from collections import deque
+
+my_deque = deque([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+print(my_deque.popleft())
+```
+
+The rest of the basic commands are the same between a list and a deque object. 
+
+Commands for the `queue.Queue` Python module
+
+|Common Queue Operation|Description|Python Code|Performance|
+|----------------------|-----------|-----------|-----------|
+|enqueue(value)|Adds "value" to the back of the queue|my_queue.put(1)|O(1)|
+|dequeue()|Two approaches: Remove and return the item from the front of the queue; or pop off index 0|my_queue.get()|O(1)|
+|size() |Return the size of the queue|my_queue.qsize() *Note, this is not always accurate|O(1)|
+|empty()|Returns true if the length of the queue is zero.|my_queue.empty()|O(1)|
+
+If you want to dig deeper into this using the deque and queue objects, then here are a few articles/sites you can start with. 
 * `collections.deque`
     - [realpython.com](https://realpython.com/python-deque/)
     - [python.org](https://docs.python.org/3/library/collections.html#collections.deque)
@@ -27,15 +60,6 @@ For our purposes we are going to be focusing on using the list as a Queue. To le
     - [geeksforgeeks.org](https://www.geeksforgeeks.org/queue-in-python/)
     - [askpython.com](https://www.askpython.com/python-modules/python-queue)
     - [geeksforgeeks.org](https://www.geeksforgeeks.org/stack-queue-python-using-module-queue/)
-
-|Common Queue Operation|Description|Python Code|Performance|
-|----------------------|-----------|-----------|-----------|
-|enqueue(value)|Adds "value" to the back of the queue|my_queue.append(value)|O(1) - Performance of adding to the end of the dynamic array|
-|dequeue()|Two approaches: Remove and return the item from the front of the queue; or pop off index 0|value = my_queue [0] del my_queue[0] or value = my_queue.pop(0)|O(n) - Performance of obtaining and removing from the beginning of the dynamic array|
-|size() |Return the size of the queue|length = len(my_queue)|O(1) - Performance of returning the size of the dynamic array|
-|empty()|Returns true if the length of the queue is zero.|if len(my_queue) == 0:|O(1) - Performance of checking the size of the dynamic array|
-
-Table sourced from [here](https://byui-cse.github.io/cse212-course/lesson04/04-prepare.html)
 ### Examples of Queues
 ---
 
