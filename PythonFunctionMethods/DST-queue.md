@@ -16,6 +16,21 @@ When using the list as a Queue Data Structure, you get O(1) performance for most
 
 ### Python Related Queue Commands
 ---
+There are three options we can use when trying to implement the Queue Data Structure in Python. The traditional list, the `queue.Queue` module, and the `collections.deque` module. The list is a dynamic array. The `queue.Queue` module is a doubly-linked list, and the `collections.deque` module is a double-ended queue.
+
+If you want to dig deeper into dynamic arrays, doubly-linked lists, or double-ended queues, then here are a few places you can start. 
+
+* For dynamic arrays:
+    - [Python documentation](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+    - [Real Python](https://realpython.com/python-lists-tuples/)
+
+* For doubly-linked lists:
+    - [GeeksforGeeks](https://www.geeksforgeeks.org/doubly-linked-list/)
+    - [Programiz](https://www.programiz.com/dsa/doubly-linked-list)
+
+* For double-ended queues:
+    - [Python documentation](https://docs.python.org/3/library/collections.html#collections.deque)
+    - [Real Python](https://realpython.com/how-to-implement-python-stack/)
 
 Queue related List commands in Python
 
@@ -28,41 +43,84 @@ Queue related List commands in Python
 
 Table sourced from [here](https://byui-cse.github.io/cse212-course/lesson04/04-prepare.html)
 
-When using `collections.deque` instead of a list, to remove an item from the data structure, you would use `.popleft()`instead. For example this code would remove and print the number 1 from the deque object. 
+Queue related commands for the `collections.deque` Python Module
 
-```Python
-from collections import deque
-
-my_deque = deque([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-
-print(my_deque.popleft())
-```
-
-The rest of the basic commands are the same between a list and a deque object. 
+queue.Queue Related queue operations
+|Common Queue Operation|Description|Python Code|Performance|
+|----------------------|-----------|-----------|-----------|
+|enqueue(value)|Adds "value" to the back of the queue|my_queue.put(value)|O(1) - Performance of adding to the end of th doubly-linked list|
+|dequeue()|Two approaches: Remove and return the item from the front of the queue; or pop off index 0|my_queue.get()|O(1) - Performance of obtaining and removing from the beginning of the doubly-linked list|
+|size() |Return the size of the queue|my_queue.qsize() *Note, this is not always accurate|O(1) - Performance of returning the size of the doubly-linked list|
+|empty()|Returns true if the length of the queue is zero.|my_queue.empty()|O(1) - Performance of checking the size of the doubly-linked list|
 
 Commands for the `queue.Queue` Python module
 
 |Common Queue Operation|Description|Python Code|Performance|
 |----------------------|-----------|-----------|-----------|
-|enqueue(value)|Adds "value" to the back of the queue|my_queue.put(1)|O(1)|
-|dequeue()|Two approaches: Remove and return the item from the front of the queue; or pop off index 0|my_queue.get()|O(1)|
-|size() |Return the size of the queue|my_queue.qsize() *Note, this is not always accurate|O(1)|
-|empty()|Returns true if the length of the queue is zero.|my_queue.empty()|O(1)|
+|enqueue(value)|Adds "value" to the back of the queue|my_queue.put(value)|O(1) - Performance of adding to the end of th doubly-linked list|
+|dequeue()|Two approaches: Remove and return the item from the front of the queue; or pop off index 0|my_queue.get()|O(1) - Performance of obtaining and removing from the beginning of the doubly-linked list|
+|size() |Return the size of the queue|my_queue.qsize() *Note, this is not always accurate|O(1) - Performance of returning the size of the doubly-linked list|
+|empty()|Returns true if the length of the queue is zero.|my_queue.empty()|O(1) - Performance of checking the size of the doubly-linked list|
 
-If you want to dig deeper into this using the deque and queue objects, then here are a few articles/sites you can start with. 
-* `collections.deque`
-    - [realpython.com](https://realpython.com/python-deque/)
-    - [python.org](https://docs.python.org/3/library/collections.html#collections.deque)
-    - [section.io](https://www.section.io/engineering-education/queue-data-structure-python/)
-    - [note.nkmk.me](https://note.nkmk.me/en/python-collections-deque/)
-* `queue.Queue`
-    - [python.org](https://docs.python.org/3/library/queue.html)
-    - [geeksforgeeks.org](https://www.geeksforgeeks.org/queue-in-python/)
-    - [askpython.com](https://www.askpython.com/python-modules/python-queue)
-    - [geeksforgeeks.org](https://www.geeksforgeeks.org/stack-queue-python-using-module-queue/)
 ### Examples of Queues
 ---
+The Queue Data Structure implemented via the list in Python. 
 
+```Python
+my_queue = []
+
+# enqueue(value)
+my_queue.append(1)
+
+# dequeue()
+value = my_queue.pop(0)
+
+# size()
+length = len(my_queue)
+
+# empty()
+is_empty = len(my_queue) == 0
+```
+
+The Queue Data Structure implemented via the `collections.deque` module in Python. 
+
+```Python
+from collections import deque
+
+my_queue = deque()
+
+# enqueue(value)
+my_queue.append(1)
+
+# dequeue()
+value = my_queue.popleft()
+
+# size()
+length = len(my_queue)
+
+# empty()
+is_empty = len(my_queue) == 0
+```
+
+The Queue Data Structure implemented via the `queue.Queue` in Python. 
+
+```Python
+from queue import Queue
+
+my_queue = Queue()
+
+# enqueue(value)
+my_queue.put(1)
+
+# dequeue()
+value = my_queue.get()
+
+# size()
+length = my_queue.qsize()
+
+# empty()
+is_empty = my_queue.empty()
+```
 
 ### Digging Deeper into Queues
 ---
