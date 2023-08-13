@@ -132,7 +132,27 @@ is_empty = my_queue.empty()
 
 ### Digging Even Deeper Still into Queues
 ---
+For this problem, we are going to explore another algorithm in our attempts at digging deeper into queues with Python. In this problem, we can use Kruskal’s algorithm to solve the problem in question. 
 
+If you do not know Kruskal’s algorithm, you can get a wonderful introduction to it [here](https://www.youtube.com/watch?v=XFhW6vhvC64). You can also dig deeper into the algorithm on [Wikipedia](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm), [GeeksforGeeks](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/), [Scaler](https://www.scaler.com/topics/data-structures/kruskal-algorithm/), and [Programize](https://www.programiz.com/dsa/kruskal-algorithm)
 
+Our goal is to take a connected and undirected graph with weighted edges, and find a subset of the edges that connect all the vertices together without any cycles and with the minimum possible total weight. 
+
+For example, if we had the following graph:
+```Python
+graph = [
+    [(1,4),(2,8)],
+    [(2,11),(4,-4)],
+    [(3,-5),(5,-2)],
+    [(4,-6)],
+    [(5,-3)],
+    []
+]
+```
+We should expect to be able to find the following points with our solution:
+```Python
+[(1,4),(2,-5),(4,-6),(5,-3),(3,-2)]
+```
+Join in the discussion below to discuss your solution to this problem. 
 
 [Back to Data Structure Tutorial Index](index.md)
