@@ -125,18 +125,31 @@ is_empty = my_queue.empty()
 ### Digging Deeper into Queues
 ---
 
+Sliding Window Maximum
+Given an array of integers and a window size, find the maximum element in each window as it slides along the array. This problem can be solved using a deque (double-ended queue) to keep track of the maximum element in the current window.
 
 ### Digging Even Deeper into Queues
 ---
 
+Shortest Path
+Given a maze represented as a matrix of 0s and 1s, where 0 represents an open cell and 1 represents a blocked cell, find the shortest path from a given starting point to a given destination point. This problem can be solved using the Breadth-First Search (BFS) algorithm, which uses a queue to keep track of the cells to be visited.
 
 ### Digging Even Deeper Still into Queues
 ---
-For this problem, we are going to explore another algorithm in our attempts at digging deeper into queues with Python. In this problem, we can use Kruskal’s algorithm to solve the problem in question. 
+For this problem, we are going to explore another algorithm in our attempts at digging deeper into queues with Python. In this problem, we can use Kruskal’s algorithm to solve the problem in question. This will also require a bit of knowledge about graph theory and priority queues to complete.
 
 If you do not know Kruskal’s algorithm, you can get a wonderful introduction to it [here](https://www.youtube.com/watch?v=XFhW6vhvC64). You can also dig deeper into the algorithm on [Wikipedia](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm), [GeeksforGeeks](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/), [Scaler](https://www.scaler.com/topics/data-structures/kruskal-algorithm/), and [Programize](https://www.programiz.com/dsa/kruskal-algorithm)
 
-Our goal is to take a connected and undirected graph with weighted edges, and find a subset of the edges that connect all the vertices together without any cycles and with the minimum possible total weight. 
+To learn about graph theory, here are a few videos and articles to get you started. 
+
+* Videos
+ - [“Graph theory full course for Beginners” by Academic Lesson](https://www.youtube.com/watch?v=sWsXBY19o8I)
+ - [“INTRODUCTION to GRAPH THEORY - DISCRETE MATHEMATICS” by TrevTutor](https://www.youtube.com/watch?v=HkNdNpKUByM)
+* Articles
+ - [“Graph Theory 101” by Science in the News](https://sitn.hms.harvard.edu/flash/2021/graph-theory-101/)
+ - [“Graph Theory” by Britannica](https://www.britannica.com/topic/graph-theory)
+
+For this problem our goal is to take a connected and undirected graph with weighted edges, and find a subset of the edges that connect all the vertices together without any cycles and with the minimum possible total weight. 
 
 For example, if we had the following graph:
 ```Python
@@ -149,7 +162,7 @@ graph = [
     []
 ]
 ```
-We should expect to be able to find the following points with our solution:
+The program we write should expect to be able to find the following points with our solution:
 ```Python
 [(1,4),(2,-5),(4,-6),(5,-3),(3,-2)]
 ```
