@@ -26,20 +26,29 @@ def shortest_path(maze, start, end):
         # Check if position equals end value then return distance
         if (current_row, current_col) == end:
             return distance
-        for delta_row, delta_col in ((0, 1), (1, 0), (0, -1), (-1, 0)):
-            next_row, next_col = current_row + delta_row, current_col + delta_col
+        
+        # Queue up modifiers to use to check the neighbors of the current position
+        for row_modifier, col_modifier in ((0, 1), (1, 0), (0, -1), (-1, 0)):
+
+            # Modify the current position using the current modifiers
+            next_row, next_col = current_row + row_modifier, current_col + col_modifier
+            # Check if the position being checked is valid
             if 0 <= next_row < num_rows and 0 <= next_col < num_cols and not visited[next_row][next_col] and maze[next_row][next_col] == 0:
+                # Mark true and add to queue if move is valid
                 visited[next_row][next_col] = True
                 queue.append(((next_row, next_col), distance + 1))
-    return -1
+    # Return "No Solution" if there is no way to get to the end of the maze
+    return "No Solution"
 
-# Example
+# Example 
+# Key: 0 represents an open space, and 1 represents a wall. 
 maze = [
-    [0, 0, 1, 0],
-    [0, 1, 0, 0],
-    [0, 1, 0, 1],
-    [0, 0, 0, 0]
+    [0, 1, 0, 0, 0, 1],
+    [0, 0, 0, 1, 0, 1],
+    [0, 1, 0, 0, 0, 0],
+    [0, 1, 0, 1, 1, 1],
+    [0, 0, 0, 0, 0, 0]
 ]
 start = (0, 0)
-end = (3, 3)
+end = (len(maze) - 1, len(maze[0]) - 1)
 print(shortest_path(maze, start, end)) # Expected output: 5
