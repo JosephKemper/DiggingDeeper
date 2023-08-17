@@ -130,9 +130,27 @@ Given an array of integers and a window size, find the maximum element in each w
 
 ### Digging Even Deeper into Queues
 ---
+For this challenge, your goal is to take a two dimensional list that will be formed into a maze consisting of 1's and 0's nested in lists like this  
+``` Python
+maze = [
+    [0, 1, 0, 0, 0, 1],
+    [0, 0, 0, 1, 0, 1],
+    [0, 1, 0, 0, 0, 0],
+    [0, 1, 0, 1, 1, 1],
+    [0, 0, 0, 0, 0, 0]
+]
+```
+And write a program to find the shortest path from the first spot in the to the last spot in the maze. You do not count the starting spot, and only count the moves you make. In the case of the provided example, the shortest path would take 9 moves to get there. 
 
-Shortest Path
-Given a maze represented as a matrix of 0s and 1s, where 0 represents an open cell and 1 represents a blocked cell, find the shortest path from a given starting point to a given destination point. This problem can be solved using the Breadth-First Search (BFS) algorithm, which uses a queue to keep track of the cells to be visited.
+In the maze, a 1 represents a wall and a 0 represents a path. To help you a bit, we used a Breadth-First Search algorithm to solve the problem. You can read about that here. 
+
+* [Breadth-first search and its uses](https://www.khanacademy.org/computing/computer-science/algorithms/breadth-first-search/a/breadth-first-search-and-its-uses)
+* [The breadth-first search algorithm (BFS)](https://www.khanacademy.org/computing/computer-science/algorithms/breadth-first-search/a/the-breadth-first-search-algorithm)
+* [Breadth First Search (BFS): Visualized and Explained](https://www.youtube.com/watch?v=xlVX7dXLS64)
+
+Remember, that whatever way you choose to solve this problem, your goal is to get to know the queue data structure better. When you're done figuring out your solution, compare it to ours and join in the comments below about what you learned. 
+
+[Solution](shortest_path.py)
 
 ### Digging Even Deeper Still into Queues
 ---
