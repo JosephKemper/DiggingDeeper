@@ -20,7 +20,6 @@ def shortest_path(maze, start, end):
         # Pull the first tuple in the queue out
         # Assign the value in index 0 to current_row
         # Assign the value in index 1 to current_col
-        # Add 1 to the value stored in distance. This will start at 0
         (current_row, current_col), distance = queue.popleft()
 
         # Check if position equals end value then return distance
