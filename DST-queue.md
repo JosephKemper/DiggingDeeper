@@ -124,9 +124,13 @@ is_empty = my_queue.empty()
 
 ### Digging Deeper into Queues
 ---
+Now, with that foundation into the Queue Data Structure, we are going to look a little deeper into the queue, and dive head first into some algorithms along the way. Our first step is to look at the Sliding Window Maximum algorithm. Here are a few resources you can use to dig a little deeper into the Sliding Window Maximum algorithm. 
+* [Sliding Window Maximum - Algorithms For Solving Problems](https://howigotjob.com/data-structure/sliding-window-maximum/)
+* [Sliding Window Maximum (Maximum of all subarrays of size K)](https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/)
+* [Sliding Window Maximum - Monotonic Queue - Leetcode 239](https://www.youtube.com/watch?v=DfljaUwZsOk)
 
-Sliding Window Maximum
-Given an array of integers and a window size, find the maximum element in each window as it slides along the array. This problem can be solved using a deque (double-ended queue) to keep track of the maximum element in the current window.
+While our problem can be described accurately in something as succinct as this statement "Given an array of integers and a window size, find the maximum element in each window as it slides along the array. This problem can be solved using a deque (double-ended queue) to keep track of the maximum element in the current window." I personally find that lacking for what I would want in a description to a problem. 
+
 
 ### Digging Even Deeper into Queues
 ---
