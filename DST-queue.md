@@ -2,7 +2,7 @@
 
 ### Why is it Important to Know About Queues?
 ---
-Imagine for a moment, you have been called into a project to help a large server manage data requests. Your goal is to make sure that all requests get processed in the order in which they were received, specifically ensuring that no one gets to cut in line. This is a queue. There are hundreds of examples of where queues are used in real life. The software used by call centers to ensure calls are answered in the order they called, tools that help schedule jobs or projects that need worked next, and the software that keeps track of what document needs printed next are just a few examples of places where the Queue Data structure is used in real life. Chances are, if you are going to be programming, you will need to know how to use the Queue data structure. 
+Imagine for a moment, you have been called into a project to help a large server manage data requests. Your goal is to make sure that all requests get processed in the order in which they were received, specifically ensuring that no one gets to cut in line. This is a queue. There are hundreds of examples of where queues are used in real life. The software used by call centers to ensure calls are answered in the order they called, tools that help schedule jobs or projects that need worked next, and the software that keeps track of what document needs printed next are just a few examples of places where the Queue Data structure is used in real life. Chances are, if you are going to be programming, you will need to know how to use the Queue Data Structure. 
 
 ### What is a Queue?
 ---
@@ -131,6 +131,113 @@ Now, with that foundation into the Queue Data Structure, we are going to look a 
 
 While our problem can be described accurately in something as succinct as this statement "Given an array of integers and a window size, find the maximum element in each window as it slides along the array. This problem can be solved using a deque (double-ended queue) to keep track of the maximum element in the current window." I personally find that lacking for what I would want in a description to a problem. 
 
+First off, the sliding window maximum algorithm can be used for more than just integers. Real life applications of this algorithm include [analyzing stock prices](https://howigotjob.com/data-structure/sliding-window-maximum/) through finding the highest price (or with a bit of adjustment to the algorithm) even the lowest price within a given time period. It can be used in [image processing](https://howigotjob.com/data-structure/sliding-window-maximum/) through things like comparing pixel brightness. Really it is possible to use this algorithm in almost any situation where we are trying to look at patterns, highs or (with a small tweak to the algorithm) lows in data is likely a situation where the Sliding Window Maximum algorithm can be used. So, while for our purposes, we will restrict our deep dive into this problem to just integers, there is a lot more that can be done with this algorithm. 
+
+We want to get an idea of what we will take into the function we will be building and what we want to put out. 
+* Inputs
+    - An array of integers
+    - Window size
+
+* Outputs
+    - A sample of the maximum values picked from the window as it moved across the array
+
+The array is simple to understand, it is just a list of random numbers, they can be positive or negative, they just need to be numbers (simply because we have chosen to restrict this example to just numbers). 
+
+The window size is the sample size we are going to look at when examining the data stored in the array. For our example, we will choose a window size of 3. When we first start out, we will look at one number at a time until we get 3 numbers in our window. From there, we will pick the largest from that group of three integers and remove the first integer we looked at (the one in the 0 index spot of our array) and then add the next integer in the array to the window we are looking at. This will effectively move the window down the array we are examining. And we will continue to do this until we have looked at every number in the array. So, what this means is that when we build a loop to iterate over the list, the leading edge of the window will be the value currently being pointed to by our loop. When we write our code, we do not want to extend the window beyond the end of the array, so we will need to put a stop in the code to prevent that from happening. We also, do not want the program to try to pick the maximum number unless the window has a total of 3 values in it. So, we will need to prevent that as well. 
+
+So, translating that into some notes for the code, we could end up with something that looks like this:
+
+```Python
+from collections import deque
+
+def sliding_window_max(input_array, window_size):
+    """
+    This function finds the largest element in a sliding window of a given size. 
+    Arguments (inputs):
+        input_array: The array to search
+        window_size: the size found in the sliding window as it stepped along the array
+    
+    Returns:
+        A list of the largest elements found in the sliding window as it stepped along the array. 
+    """
+
+    # Initialize the queue for tracking the numbers in the window and result variables.
+    
+    # Loop over the array
+
+    # Remove any elements from the queue that are no longer in the window.
+        
+    # Remove elements from the right end of the deque that are smaller than the current element 
+    # This puts the largest item at the front of the queue
+        
+    # Add the current element to the queue 
+    
+    # If the current element is the end of the window, add the maximum element in the queue to the result.
+    
+    # Return a list of integers representing the maximum values found in the sliding window while iterating through the input array
+    
+# Example
+number_array = [1,3,-1,-3,5,3,6,7]
+window_size = 3
+print(sliding_window_max(number_array, window_size)) # Expected output: [3,3,5,5,6,7]
+
+# Included for example of how versatile this algorithm is. 
+letter_array = ["z","v","h","b","j","d","f","n"]
+window_size = 3
+print(sliding_window_max(letter_array, window_size)) # Expected output: ['z', 'v', 'j', 'j', 'j', 'n']
+```
+Then, taking our plan and research, we could build this as one potential implementation of the program to solve our problem. 
+
+```Python
+from collections import deque
+
+def sliding_window_max(input_array, window_size):
+    """
+    This function finds the largest element in a sliding window of a given size. 
+    Arguments (inputs):
+        input_array: The array to search
+        window_size: the size found in the sliding window as it stepped along the array
+    
+    Returns:
+        A list of the largest elements found in the sliding window as it stepped along the array. 
+    """
+
+    # Initializing the queue for tracking the numbers in the window and result variables.
+    max_queue = deque()
+    result = []
+    
+    # Looping over the array
+    for i in range(len(input_array)):
+
+        # Removing any elements from the queue that are no longer in the window.
+        # This puts the largest item at the front of the queue
+        while max_queue and max_queue[0] < i - window_size + 1:
+            max_queue.popleft()
+        
+        # remove elements from the right end of the deque that are smaller than the current element
+        while max_queue and input_array[max_queue[-1]] < input_array[i]:
+            max_queue.pop()
+        
+        # Adding the current element to the queue
+        max_queue.append(i)
+
+        # If the current element is the end of the window, add the maximum element in the queue to the result.
+        if i >= window_size - 1:
+            result.append(input_array[max_queue[0]])
+    
+    # Return a list of integers representing the maximum values found in the sliding window while iterating through the input array
+    return result
+
+# Example
+number_array = [1,3,-1,-3,5,3,6,7]
+window_size = 3
+print(sliding_window_max(number_array, window_size)) # Expected output: [3,3,5,5,6,7]
+
+# Included for example of how versatile this algorithm is. 
+letter_array = ["z","v","h","b","j","d","f","n"]
+window_size = 3
+print(sliding_window_max(letter_array, window_size)) # Expected output: ['z', 'v', 'j', 'j', 'j', 'n']
+```
 
 ### Digging Even Deeper into Queues
 ---
