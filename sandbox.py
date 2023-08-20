@@ -1,27 +1,40 @@
 from collections import deque
 
 def sliding_window_max(nums, window_size):
-    num_elements = len(nums)
-    max_queue = deque()
-    result = []
-    window = []
-    for i in range(num_elements):
-        # Remove elements from the front of the deque that are outside of the current window
-        while max_queue and max_queue[0] < i - window_size + 1:
-            max_queue.popleft()
-        # Remove elements from the back of the deque that are smaller than the current element
-        while max_queue and nums[max_queue[-1]] < nums[i]:
-            max_queue.pop()
-        # Append the index of the current element to the back of the deque
-        max_queue.append(i)
-        # Update the window variable to store the elements in the current window
-        if i >= window_size - 1:
-            window_start = i - window_size + 1
-            window_end = i + 1
-            window = nums[window_start:window_end]
-            #print(f"Window: {window}")
-            result.append(nums[max_queue[0]])
-    return result
+  """
+  This function finds the maximum element in a sliding window of a given size.
+
+  Args:
+    nums: The array to search.
+    window_size: The size of the sliding window.
+
+  Returns:
+    A list of the maximum elements in the sliding window.
+  """
+
+  # Initializing the queue and result variables.
+  max_queue = deque()
+  result = []
+
+  # Looping over the array.
+  for i in range(len(nums)):
+
+    # Removing any elements from the queue that are no longer in the window.
+    while max_queue and max_queue[0] < i - window_size + 1:
+      max_queue.popleft()
+
+    # Adding the current element to the queue.
+    max_queue.append(i)
+
+    # Removing the element at the front of the queue if it is not the maximum element in the queue.
+    if max_queue and nums[max_queue[0]] < nums[i]:
+      max_queue.popleft()
+
+    # If the current element is the end of the window, add the maximum element in the queue to the result.
+    if i >= window_size - 1:
+      result.append(nums[max_queue[0]])
+
+  return result
 
 # Example
 nums = [1,3,-1,-3,5,3,6,7]
