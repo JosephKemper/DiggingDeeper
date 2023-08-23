@@ -12,7 +12,11 @@
 ---
 
 
-### Examples of Linked Lists
+### Strengths and weaknesses of Linked Lists
+---
+
+
+### Building a Linked List/Doubly Linked List 
 ---
 
 
