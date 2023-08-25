@@ -22,6 +22,12 @@
 
 ### Digging Deeper into Linked Lists
 ---
+Sure! Here are three advanced programming challenges using doubly linked lists that you can use for your tutorial:
+
+Implement a circular doubly linked list.
+Reverse a doubly linked list in place.
+Implement a doubly linked list with a sentinel node.
+These challenges are more advanced and require the use of algorithms to solve. Good luck with your tutorial!
 
 
 ### Digging Even Deeper into Linked Lists
