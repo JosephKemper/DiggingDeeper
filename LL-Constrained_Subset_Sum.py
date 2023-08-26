@@ -1,30 +1,35 @@
 from collections import deque
 
-def constrainedSubsetSum(nums, k):
-    n = len(nums)
-    dp = [0] * n
-    dq = deque()
-    for i in range(n):
-        dp[i] = nums[i]
-        if dq:
-            dp[i] += dp[dq[0]]
-        while dq and dq[0] < i - k:
-            dq.popleft()
-        while dq and dp[dq[-1]] < dp[i]:
-            dq.pop()
-        dq.append(i)
-    return max(dp)
+def constrained_subset_sum(number_list, max_distance):
+    list_length = len(number_list)
+    max_sums = [0] * list_length
+    max_sum_indices = deque()
+    for i in range(list_length):
+        max_sums[i] = number_list[i]
+        if max_sum_indices:
+            max_sums[i] += max_sums[max_sum_indices[0]]
+        while max_sum_indices and max_sum_indices[0] < i - max_distance:
+            max_sum_indices.popleft()
+        while max_sum_indices and max_sums[max_sum_indices[-1]] < max_sums[i]:
+            max_sum_indices.pop()
+        max_sum_indices.append(i)
+    return max(max_sums)
 
 # Example:
-nums = [10, 2, -10, 5, 20]
+number_list = [10, 2, -10, 5, 20]
 k = 2
-print(constrainedSubsetSum(nums, k)) # Output: 37
+print(constrained_subset_sum(number_list, k)) # Output: 37
 
 
 
 
 """
-The Constrained Subsequence Sum problem is a classic problem in computer science. Given an integer array `nums` and an integer `k`, the goal is to return the maximum sum of a non-empty subsequence of that array such that for every two consecutive integers in the subsequence, `nums[i]` and `nums[j]`, where `i < j`, the condition `j - i <= k` is satisfied. A subsequence of an array is obtained by deleting some number of elements (can be zero) from the array, leaving the remaining elements in their original order¹.
+The Constrained Subsequence Sum problem is a classic problem in computer science. 
+Given an integer array `nums` and an integer `k`, the goal is to return the maximum 
+sum of a non-empty subsequence of that array such that for every two consecutive integers in the subsequence, 
+`nums[i]` and `nums[j]`, where `i < j`, the condition `j - i <= k` is satisfied. 
+A subsequence of an array is obtained by deleting some number of elements (can be zero) from the array, 
+leaving the remaining elements in their original order¹.
 
 Here's an example of how you can solve this problem using the `deque` data structure in Python:
 

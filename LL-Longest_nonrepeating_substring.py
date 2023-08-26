@@ -1,19 +1,20 @@
 from collections import deque
 
-def length_of_longest_substring(s):
-    n = len(s)
-    max_len = 0
-    dq = deque()
-    for i in range(n):
-        while s[i] in dq:
-            dq.popleft()
-        dq.append(s[i])
-        max_len = max(max_len, len(dq))
-    return max_len
+def length_of_longest_substring(sample_string):
+    string_length = len(sample_string)
+    max_length = 0
+    substring_chars = deque()
+    for i in range(string_length):
+        while sample_string[i] in substring_chars:
+            substring_chars.popleft()
+        substring_chars.append(sample_string[i])
+        max_length = max(max_length, len(substring_chars))
+    return max_length
 
 # Example:
-s = "abcabcbb"
-print(length_of_longest_substring(s)) # Output: 3
+sample_string = "abcabcbb"
+print(length_of_longest_substring(sample_string)) # Output: 3
+
 
 
 """
