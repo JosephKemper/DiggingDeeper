@@ -1,24 +1,27 @@
 from collections import deque
 
-def first_unique_char(s):
-    dq = deque()
-    for char in s:
-        if char not in dq:
-            dq.append(char)
+def first_unique_char(test_string):
+    char_queue = deque()
+    for char in test_string:
+        if char not in char_queue:
+            char_queue.append(char)
         else:
-            dq.remove(char)
-    if len(dq) > 0:
-        return s.index(dq[0])
+            char_queue.remove(char)
+    if len(char_queue) > 0:
+        return char_queue[0]
     else:
-        return -1
+        return None
 
 # Example:
-s = "leetcode"
-print(first_unique_char(s)) # Output: 0
+test_string = "Happy"
+print(first_unique_char(test_string)) # Output: H
+
 
 
 """
-The First Unique Character in a String problem is a classic problem in computer science. Given a string, the goal is to find the first non-repeating character in it and return its index. If it doesn't exist, return -1¹.
+The First Unique Character in a String problem is a classic problem in computer science. 
+Given a string, the goal is to find the first non-repeating character in it and return its index. 
+If it doesn't exist, return -1¹.
 
 Here's an example of how you can solve this problem using the `deque` data structure in Python:
 
