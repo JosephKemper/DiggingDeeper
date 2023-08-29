@@ -26,6 +26,7 @@ print(first_unique_char(test_string)) # Output: H
 
 
 """
+Source
 The First Unique Character in a String problem is a classic problem in computer science. 
 Given a string, the goal is to find the first non-repeating character in it and return its index. 
 If it doesn't exist, return -1¹.
