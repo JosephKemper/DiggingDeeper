@@ -1,20 +1,27 @@
 from collections import deque
 
 def first_unique_char(test_string):
+    # Create a queue to store characters
     char_queue = deque()
+    # Iterate over each character in the test string
     for char in test_string:
+        # If the character is not in the queue, add it to the queue
         if char not in char_queue:
             char_queue.append(char)
+        # If the character is already in the queue, remove it from the queue
         else:
             char_queue.remove(char)
+    # If the queue is not empty, return the first character in the queue
     if len(char_queue) > 0:
         return char_queue[0]
+    # If the queue is empty, tell user there are no unique characters
     else:
-        return None
+        return f"There are no unique characters in the string '{test_string}'"
 
 # Example:
 test_string = "Happy"
 print(first_unique_char(test_string)) # Output: H
+
 
 
 
