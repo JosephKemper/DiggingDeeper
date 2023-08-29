@@ -20,30 +20,19 @@
 ---
 
 
-### Digging Deeper into Linked Lists
+### Digging Deeper into Linked Lists Part 0
 ---
+For our first challenge, our goal is to take a string of unknown length, collect all unique characters from that string, and return the first character from that string that is unique. For example, in the string "aabbcdeeff", we would want to collect the "c" and the "d" then return the "c" when complete. 
 
-- **Longest Substring Without Repeating Characters**: Given a string, find the length of the longest substring without repeating characters¹.
 
+### Digging Deeper into Linked Lists Part 1
+---
+For our second challenge, our goal is to find the longest continuous sequence of unique characters that exists within a string. For example, if we were provided the string "abcbbacdf". We would first find the substring "abc" from the start of the string with a length of 3, and then find the string "bacdf" from the find end of the string with a length of 5, and from there return 5 from the function.
+
+
+### Digging Deeper into Linked Lists Part 2
+---
 - **Constrained Subsequence Sum**: Given an integer array `nums` and an integer `k`, return the maximum sum of a non-empty subsequence of that array such that for every two consecutive integers in the subsequence, `nums[i]` and `nums[j]`, where `i < j`, the condition `j - i <= k` is satisfied. A subsequence of an array is obtained by deleting some number of elements (can be zero) from the array, leaving the remaining elements in their original order¹.
-
-- **First Unique Character in a String**: Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1¹.
-
-These problems can be challenging and require the use of algorithms to solve. You can find more challenging programming problems on websites such as [Python Principles](^3^), [Edabit](^4^), and [DataCamp](^5^). These websites offer a variety of challenges to help you develop your skills in Python. I hope this helps! 😊
-
-Source: Conversation with Bing, 8/26/2023
-(1) Python's deque: Implement Efficient Queues and Stacks. https://realpython.com/python-deque/.
-(2) Online Python Challenges - Python Principles. https://pythonprinciples.com/challenges/.
-(3) 2,500+ Python Practice Challenges // Edabit. https://edabit.com/challenges/python3.
-(4) 5 Python Challenges to Develop Your Skills | DataCamp. https://www.datacamp.com/blog/5-python-challenges.
-(5) Deque in Python - GeeksforGeeks. https://www.geeksforgeeks.org/deque-in-python/.
-
-### Digging Even Deeper into Linked Lists
----
-
-
-### Digging Even Deeper Still into Linked Lists
----
 
 
 

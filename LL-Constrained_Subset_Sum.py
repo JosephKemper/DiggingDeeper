@@ -27,14 +27,15 @@ def constrained_subset_sum(number_list, max_distance):
 
 # Example:
 number_list = [10, 2, -10, 5, 20]
-k = 2
-print(constrained_subset_sum(number_list, k)) # Output: 37
+max_distance = 2
+print(constrained_subset_sum(number_list, max_distance)) # Output: 37
 
 
 
 
 
 """
+Source
 The Constrained Subsequence Sum problem is a classic problem in computer science. 
 Given an integer array `nums` and an integer `k`, the goal is to return the maximum 
 sum of a non-empty subsequence of that array such that for every two consecutive integers in the subsequence, 
