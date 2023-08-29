@@ -1,24 +1,35 @@
 from collections import deque
 
 def constrained_subset_sum(number_list, max_distance):
+    # Get the length of the input list
     list_length = len(number_list)
+    # Initialize a list to store the maximum sums
     max_sums = [0] * list_length
+    # Create a deque to store the indices of the maximum sums
     max_sum_indices = deque()
+    # Iterate over each element in the input list
     for i in range(list_length):
+        # Set the current maximum sum to the current element in the input list
         max_sums[i] = number_list[i]
+        # If the deque is not empty, add the maximum sum at the first index in the deque to the current maximum sum
         if max_sum_indices:
             max_sums[i] += max_sums[max_sum_indices[0]]
+        # While the first index in the deque is less than i - max_distance, remove it from the deque
         while max_sum_indices and max_sum_indices[0] < i - max_distance:
             max_sum_indices.popleft()
+        # While the last index in the deque has a smaller maximum sum than the current maximum sum, remove it from the deque
         while max_sum_indices and max_sums[max_sum_indices[-1]] < max_sums[i]:
             max_sum_indices.pop()
+        # Add the current index to the deque
         max_sum_indices.append(i)
+    # Return the maximum value in the maximum sums list
     return max(max_sums)
 
 # Example:
 number_list = [10, 2, -10, 5, 20]
 k = 2
 print(constrained_subset_sum(number_list, k)) # Output: 37
+
 
 
 

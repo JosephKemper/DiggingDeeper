@@ -1,19 +1,28 @@
 from collections import deque
 
-def length_of_longest_substring(sample_string):
+def length_of_longest_nonrepeating_substring(sample_string):
+    # Get the length of the input string
     string_length = len(sample_string)
+    # Initialize a variable to store the maximum length of the substring
     max_length = 0
+    # Create a deque to store the characters of the substring
     substring_chars = deque()
+    # Iterate over each character in the input string
     for i in range(string_length):
+        # While the current character is in the deque, remove characters from the left of the deque
         while sample_string[i] in substring_chars:
             substring_chars.popleft()
+        # Add the current character to the right of the deque
         substring_chars.append(sample_string[i])
+        # Update the maximum length of the substring if necessary
         max_length = max(max_length, len(substring_chars))
+    # Return the maximum length of the substring
     return max_length
 
 # Example:
 sample_string = "abcabcbb"
-print(length_of_longest_substring(sample_string)) # Output: 3
+print(length_of_longest_nonrepeating_substring(sample_string)) # Output: 3
+
 
 
 
