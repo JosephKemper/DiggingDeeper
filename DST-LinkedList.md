@@ -29,6 +29,9 @@ For our first challenge, our goal is to take a string of unknown length, collect
 ---
 For our second challenge, our goal is to find the longest continuous sequence of unique characters that exists within a string. For example, if we were provided the string "abcbbacdf". We would first find the substring "abc" from the start of the string with a length of 3, and then find the string "bacdf" from the find end of the string with a length of 5, and from there return 5 from the function.
 
+Try figuring this out on your own and then compare your solution to ours. 
+
+[Solution](LL-Longest_nonrepeating_substring.py)
 
 ### Digging Deeper into Linked Lists Part 2
 ---
