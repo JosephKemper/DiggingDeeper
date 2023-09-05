@@ -35,8 +35,7 @@ Try figuring this out on your own and then compare your solution to ours.
 
 ### Digging Deeper into Linked Lists Part 2
 ---
-- **Constrained Subsequence Sum**: Given an integer array `nums` and an integer `k`, return the maximum sum of a non-empty subsequence of that array such that for every two consecutive integers in the subsequence, `nums[i]` and `nums[j]`, where `i < j`, the condition `j - i <= k` is satisfied. A subsequence of an array is obtained by deleting some number of elements (can be zero) from the array, leaving the remaining elements in their original order¹.
 
-
+Another problem that uses the Python deque data structure and could be an appropriate final challenge for your lesson on linked lists is the “Palindrome Checker” problem. This problem involves checking whether a given string is a palindrome or not. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward, ignoring punctuation, capitalization, and spacing. A deque can be used to solve this problem efficiently by adding the characters of the string to the deque and then comparing the characters at the front and rear of the deque until they are different or until the deque is empty. This problem is a practical application of the deque data structure and could be a good fit for your blog post on linked lists. Is there anything else you would like to know?
 
 [Back to Data Structure Tutorial Index](index.md)
