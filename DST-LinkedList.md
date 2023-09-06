@@ -4,6 +4,7 @@
 ---
 
 
+
 ### What is a Linked List?
 ---
 
@@ -36,6 +37,7 @@ Try figuring this out on your own and then compare your solution to ours.
 ### Digging Deeper into Linked Lists Part 2
 ---
 
-Another problem that uses the Python deque data structure and could be an appropriate final challenge for your lesson on linked lists is the “Palindrome Checker” problem. This problem involves checking whether a given string is a palindrome or not. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward, ignoring punctuation, capitalization, and spacing. A deque can be used to solve this problem efficiently by adding the characters of the string to the deque and then comparing the characters at the front and rear of the deque until they are different or until the deque is empty. This problem is a practical application of the deque data structure and could be a good fit for your blog post on linked lists. Is there anything else you would like to know?
+For our third challenge, our goal is to take in an unknown string, and check if it is a palindrome or not. Your program should be able to handle cases where the central letter in the palindrome is a single letter or comes in a pair. We do not need to worry about phrases, or case, but if you want to go above and beyond, please do so. Either way, when you are finished, join in the discussion below and discuss your solution with everyone else. 
+
 
 [Back to Data Structure Tutorial Index](index.md)

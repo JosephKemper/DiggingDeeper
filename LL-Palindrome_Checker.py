@@ -18,6 +18,7 @@ def is_palindrome(string):
     return True
 
 # Test the function with some sample input
-print(is_palindrome("racecar")) # Output: True
-print(is_palindrome("hello"))   # Output: False
-print(is_palindrome("madam"))   # Output: True
+print(is_palindrome("racecar"))  # Output: True
+print(is_palindrome("hello"))    # Output: False
+print(is_palindrome("madam"))    # Output: True
+print(is_palindrome("testtset")) # Output: True
