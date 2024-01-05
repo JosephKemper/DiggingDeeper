@@ -1,0 +1,23 @@
+### Wednesday 3 January 2023
+I once heard that the first Nintendo Gameboy has more computer technology in it than they used to send a man to the moon. While I never actually verified that claim I can believe it is true, but even if it were not true of that now ancient piece of technology, I can certainly believe it to be true of the marvel of technology that is our modern smartphone. From the first time I heard that claim, I was left to ponder on how much we must be under utilizing the technology we have at our fingertips. If a group of people could use less technology than what we carry in our pockets to send a man to the moon, why can't we use that same marvel of a device to propel our futures to be filled with a grander set of tomorrows?
+
+In the book, Problem Solving with Algorithms and Data Structures using Python, Bradley N. Miller and David L. Ranum (Problem Solving) state that "The science of computing is concerned with using computers to solve problems." While I liked that line the first time I read it, I didn't fully appreciate it until I read it again and stopped to ponder on it, and as I pondered on the implications of that line I realized that in too many cases, I am not using my phone or computer to solve problems.
+
+But how to use that insight to help me become a better programmer? 
+
+Problem Solving, like any other skill needs to be learned and practiced. So, as I spend more time practicing the skill of problem solving, I will get better at it and then will be able to apply those skills in more areas, like my programming efforts.
+
+On page 2 of Problem Solving, we read "Given a problem a computer scientist's goal is to develop an algorithm, a step-by-step list of instructions for solving any instance of the problem that might arise."
+
+So, if the algorithm is a step by step solution to a problem, and the program is written to solve a problem, then the whole program is the algorithm. A sufficiently complex problem might be broken down into smaller sub problems, which might have its own set of steps to solve, but that is still part of the larger algorithm. This means that, on at least a macro level, there is no difference between the algorithm and the program. Thus, learning to master algorithms better is also the process of learning to write programs better. More specifically, learning to think and program in algorithms, will help take programming to more of a predictable science that is easier to plan out.
+
+### Thursday, 4 January, 2024
+
+Taking this one step further, with a program being an algorithm, a set of steps used to solve a problem, then before I sit down to write a single line of code, I would want to have a proper understanding of the problem I am trying to solve. I would want a plan of attack for what I want to do and how I want to achieve it. And with this solution being one that I want to build and walk away from and even hand over to a perfect stranger, then I will want to have that much better of a plan in place before I even create the file I will be writing the program within. 
+
+"Computer science, as it pertains to the problem-solving process itself, is also the study of abstraction." pg 3
+I remember from my Programming with Classes class when we studied Abstraction, that abstraction boiled down to tucking the complexities of the program into a class and hiding it from the end user. So, if abstraction is part of the "problem-solving process" then when trying to solve problems, the process will involve stripping away the unnecessary bits so you can focus on the important parts.
+
+The first thing that comes to my when it comes to simplifying things is the biggest lesson I took away from my Advanced Writing in Professional Contexts class at Brigham Young University -- Idaho, which is that simplifying things takes time and specially a higher level of knowledge. Yes, I understand that when it comes simplifying things the process of writing an essay and the process of writing code are two entirely different and unrelated processes, but I believe the process of simplifying will be very similar. For both, you need to have a complete understanding of the subject at hand. For both, you need to then pull out the major parts, hide away what does not matter, and then include only the most important and relevant details. 
+
+So, with that foundation in place, that means that the best way to program is to first gain a super in depth and high level understanding of the problem I am trying to solve, and from there, after I have built a solid understanding of the problem break it down into its most basic elements, and then design a solution for it. At that point, I could begin programming.
