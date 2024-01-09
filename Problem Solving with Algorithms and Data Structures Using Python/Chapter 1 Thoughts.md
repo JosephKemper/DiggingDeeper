@@ -28,3 +28,6 @@ On page 4, there is a wonderful image that shows the idea of abstraction in proc
 ### Saturday, 6 January 2024
 "Programming is the process of taking an algorithm and encoding it into a notation, a programming language, so that it can be executed by a computer." Problem Solving with Algorithms and Data Structures Using Python pg. 4
 I love this thought. It sums up everything I had been thinking about since starting to read this book. And as I look at wonderful summary of my thoughts, I realize that I have been approaching programming in a much less effective way. If I first build the algorithm, I then get a plan for the whole program that I am going to be writing. I really like that idea. 
+
+### Monday, 8 January, 2024
+Life and the problems that exist within it are much more complex than default data structures provided in Programming languages are prepared to handle. This is where custom built data structures, along with a bit of abstraction, come in. They allow us to handle the problem in a way tailored to the problem we are solving. To accomplish this, we will need to remove any unnecessary details to focus in on just the most important bits. This process is another way we work with abstraction. 
